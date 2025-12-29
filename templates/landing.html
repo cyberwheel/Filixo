@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Filixo – File Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  
+  <h1 class="reveal">FILIXO</h1>
+  <p class="reveal">
+    A modern, secure and lightning‑fast file conversion platform.
+  </p>
+  <a href="/dashboard">
+    <button class="primary-btn">Start Converting</button>
+  </a>
+</section>
+
+<!-- TRUST -->
+<section class="section white reveal">
+  <h2>Trusted & Secure</h2>
+  <p>
+    Filixo processes your files securely.  
+    No permanent storage. No ads. No tracking.
+  </p>
+</section>
+
+<!-- FEATURES -->
+<section class="section light">
+  <div class="feature-grid">
+    <div class="feature-card reveal">🖼 Image → PDF</div>
+    <div class="feature-card reveal">📄 PDF → DOCX</div>
+    <div class="feature-card reveal">📝 DOCX → PDF</div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section white reveal">
+  <h2>Why Filixo?</h2>
+  <p>
+    Built for students, professionals and teams who need
+    fast file conversions without complexity.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="{{ url_for('static', filename='images/filixo-logo.png') }}" class="footer-logo">
+  <p>© 2025 Filixo · Built with care</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+</body>
+</html>

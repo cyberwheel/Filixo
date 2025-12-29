@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Filixo Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+<header class="header">
+  <button class="back-btn" onclick="goHome()">← Back</button>
+
+  <div class="brand-wrap">
+    <img src="" class="logo">
+    <span class="brand-text">FILIXO</span>
+  </div>
+
+  <div></div>
+</header>
+
+
+
+  <!-- TOOL SELECTION -->
+  <div id="toolSelect" class="tool-grid">
+    <div class="tool-card" onclick="selectTool('img')">🖼 Image → PDF</div>
+    <div class="tool-card" onclick="selectTool('pdf')">📄 PDF → DOCX</div>
+    <div class="tool-card" onclick="selectTool('docx')">📝 DOCX → PDF</div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div id="controls" class="controls hidden">
+        <div id="operationLine" class="operation-line"></div>
+
+    <button class="back-btn small" onclick="resetToTools()">← Change Tool</button>
+    <h2 id="operationTitle" class="operation-title"></h2>
+    <div id="img" class="section hidden">
+      <input type="file" multiple id="imgFiles" onchange="handleFiles(this)">
+    </div>
+
+    <div id="pdf" class="section hidden">
+      <input type="file" id="pdfFile" onchange="handleFiles(this)">
+    </div>
+
+    <div id="docx" class="section hidden">
+      <input type="file" id="docxFile" onchange="handleFiles(this)">
+    </div>
+
+
+
+
+
+    <!-- FILE INFO -->
+    <div id="fileInfo" class="file-info hidden"></div>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+      <button id="convertBtn" class="primary" onclick="convert()">Convert</button>
+      <button id="downloadBtn" class="primary hidden">Download</button>
+      <button id="resetBtn" class="secondary hidden" onclick="resetAll()">Reset</button>
+    </div>
+
+    <!-- PREVIEW -->
+    <div id="preview" class="preview hidden"></div>
+
+  </div>
+</div>
+
+<div id="loader" class="loader" style="display:none;">
+  Converting…
+</div>
+
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

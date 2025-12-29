@@ -1,0 +1,267 @@
+/* =========================
+   BASE / RESET
+========================= */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =========================
+   HEADER / BRANDING
+========================= */
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  justify-self: start;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 34px;
+}
+
+.brand-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tool-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.controls {
+  background: white;
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.operation-line {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.operation-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #466099;
+  margin-bottom: 16px;
+}
+
+.file-info {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* =========================
+   PREVIEW
+========================= */
+.preview {
+  margin-top: 20px;
+}
+
+.preview img,
+.preview iframe {
+  width: 100%;
+  height: 520px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f9fafb;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary {
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+  color: white;
+}
+
+.secondary {
+  background: #e5e7eb;
+}
+
+/* =========================
+   LOADER
+========================= */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* =========================
+   LANDING PAGE
+========================= */
+.hero {
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.hero-logo {
+  height: 42px;
+  opacity: 0.9;
+}
+
+.hero-brand-text {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section.white {
+  background: white;
+}
+
+.section.light {
+  background: #f8fafc;
+}
+
+.feature-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: #0f172a;
+  color: #cbd5f5;
+}
+
+.footer-logo {
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .hero-brand-text {
+    font-size: 22px;
+  }
+}

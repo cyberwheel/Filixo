@@ -1,0 +1,7 @@
+Flask
+bcrypt
+Pillow
+pdf2docx
+docx2pdf
+python-magic
+uuid
